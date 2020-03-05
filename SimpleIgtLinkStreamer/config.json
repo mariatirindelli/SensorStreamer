@@ -1,0 +1,7 @@
+{
+  "serverAddress": "127.0.0.1",
+  "port": 9000,
+  "sensor": "FT_ATI",
+  "calFilePath": "FT28270.cal",
+  "frequency" :  60
+}
