@@ -51,7 +51,10 @@ int main()
 {
 	Config config;
 	if (parse_config(config) < 0)
-	{
+	{		
+		char a;
+		std::cout << "Press any key to exit ... ";
+		std::cin >> a;
 		return -1;
 	}
 
@@ -64,6 +67,10 @@ int main()
 	else
 	{
 		std::cout << "Unknown sensor" << std::endl;
+
+		char a;
+		std::cout << "Press any key to exit ... ";
+		std::cin >> a;
 		return -1;
 	}
 
@@ -72,6 +79,10 @@ int main()
 	if (sensor->initSensor() < 0)
 	{
 		std::cout << "Unable to initialize sensor" << std::endl;
+
+		char a;
+		std::cout << "Press any key to exit ... ";
+		std::cin >> a;
 		return -1;
 	}
 	sensor->printCalInfo();
@@ -79,6 +90,12 @@ int main()
 	igtl::ServerSocket::Pointer serverSocket;
 	serverSocket = igtl::ServerSocket::New();
 	serverSocket->CreateServer(config.port);
+
+	std::string address;
+	int port;
+	serverSocket->GetSocketAddressAndPort(address, port);
+	
+	std::cout << "Open connection at: " << address << "  " << std::to_string(port) << std::endl;
 
 	igtl::ClientSocket::Pointer socket;
 	bool client_connected = false;
@@ -124,5 +141,4 @@ int main()
 		Sleep(1000/(config.freq));
 	}
 	return 0;
-
 }

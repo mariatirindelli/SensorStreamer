@@ -9,7 +9,20 @@
       ],
       "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
       "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
-      "cmakeCommandArgs": "-DDAQmx_DIR=C:\\Users\\maria\\Desktop\\Git_repo\\CppLibraries\\DAQmx\\nidaqmx -D OpenIGTLink_DIR=C:/Users/maria/Desktop/Git_repo/CppLibraries/openIGTlink/Debug/lib/igtl/cmake/igtl-3.1 -DCMAKE_INSTALL_PREFIX=C:\\Users\\maria\\Desktop\\install",
+      "cmakeCommandArgs": "-DDAQmx_DIR=C:\\Users\\maria\\Desktop\\Git_repo\\CppLibraries\\DAQmx\\nidaqmx -D OpenIGTLink_DIR=C:/Users/maria/Desktop/Git_repo/CppLibraries/openIGTlink/x64/Debug/lib/igtl/cmake/igtl-3.1 -DCMAKE_INSTALL_PREFIX=C:\\Users\\maria\\Desktop\\install",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": ""
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [
+        "msvc_x64_x64"
+      ],
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "cmakeCommandArgs": "-DDAQmx_DIR=C:\\Users\\maria\\Desktop\\Git_repo\\CppLibraries\\DAQmx\\nidaqmx -D OpenIGTLink_DIR=C:/Users/maria/Desktop/Git_repo/CppLibraries/openIGTlink/x64/Release/lib/igtl/cmake/igtl-3.1 -DCMAKE_INSTALL_PREFIX=C:\\Users\\maria\\Desktop\\install",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     }
